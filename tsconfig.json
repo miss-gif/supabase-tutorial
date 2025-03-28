@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noImplicitAny": true, // 암시적 any 사용 금지
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
