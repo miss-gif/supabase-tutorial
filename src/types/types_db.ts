@@ -9,70 +9,23 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      Book: {
+      todos: {
         Row: {
-          author: string;
-          coverImgUrl: string;
-          description: string;
+          content: string | null;
           id: number;
-          publisher: string;
-          searchIndex: string;
-          subTitle: string;
-          title: string;
+          title: string | null;
         };
         Insert: {
-          author: string;
-          coverImgUrl: string;
-          description: string;
+          content?: string | null;
           id?: number;
-          publisher: string;
-          searchIndex?: string;
-          subTitle: string;
-          title: string;
+          title?: string | null;
         };
         Update: {
-          author?: string;
-          coverImgUrl?: string;
-          description?: string;
+          content?: string | null;
           id?: number;
-          publisher?: string;
-          searchIndex?: string;
-          subTitle?: string;
-          title?: string;
+          title?: string | null;
         };
         Relationships: [];
-      };
-      Review: {
-        Row: {
-          author: string;
-          bookId: number;
-          content: string;
-          createdAt: string;
-          id: number;
-        };
-        Insert: {
-          author: string;
-          bookId: number;
-          content: string;
-          createdAt?: string;
-          id?: number;
-        };
-        Update: {
-          author?: string;
-          bookId?: number;
-          content?: string;
-          createdAt?: string;
-          id?: number;
-        };
-        Relationships: [
-          {
-            foreignKeyName: "Review_bookId_fkey";
-            columns: ["bookId"];
-            isOneToOne: false;
-            referencedRelation: "Book";
-            referencedColumns: ["id"];
-          },
-        ];
       };
     };
     Views: {
