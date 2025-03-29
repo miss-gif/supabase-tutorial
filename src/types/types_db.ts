@@ -11,18 +11,24 @@ export type Database = {
     Tables: {
       todos: {
         Row: {
-          content: string | null;
+          contents: string | null;
+          end_date: string | null;
           id: number;
+          start_date: string | null;
           title: string | null;
         };
         Insert: {
-          content?: string | null;
+          contents?: string | null;
+          end_date?: string | null;
           id?: number;
+          start_date?: string | null;
           title?: string | null;
         };
         Update: {
-          content?: string | null;
+          contents?: string | null;
+          end_date?: string | null;
           id?: number;
+          start_date?: string | null;
           title?: string | null;
         };
         Relationships: [];
